@@ -7,10 +7,14 @@ Unit converter is a calculator that is used for measuring values from one unit t
 def length_converter(from_value, from_metric, target_metric):
     """Store conversion factors in dictrionary for km, m, cm with values with respect to meters."""
     conversion_factor = {
-        "km" : 1000,        #with respect to meters
-        "m" : 1,            #with respect to meters
-        "cm" : 0.01,        #with respect to meters
-        "mm" : 0.001        #with respect to meters
+        "km" : 1000,            # 1 kilo meter  = 1000 meters
+        "m" : 1,                # 1 meter  = 1 meters
+        "cm" : 0.01,            # 1 centi-meter = 0.01 meters
+        "mm" : 0.001,           # 1 milli-meter = 0.001 meters
+        "mile" : 1609.34,       # 1 mile = 1609.34 meters
+        "yard": 0.9144,         # 1 yard = 0.9144 meters
+        "foot" : 0.3048,        # 1 foot = 0.3048 meters
+        "inch" : 0.0254         # 1 inch = 0.0254 meters
     }
 
     from_metric = from_metric.lower().strip()
@@ -170,7 +174,11 @@ def run_length_converter():
         "km" : "Kilometer",
         "m" : "meter",
         "cm" : "Centimeter",
-        "mm" : "Millimeter"
+        "mm" : "Millimeter",
+        "mile" : "Mile",
+        "yard" : "Yard",
+        "foot" : "Foot",
+        "inch" :"Inch"
     }
 
     value, source, target = get_conversion_inputs("length", units)
